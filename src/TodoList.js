@@ -1,8 +1,10 @@
 function TodoList(props) {
   return (
-    <ul>
-        {props.children}
-    </ul>
+    <div className="main__Div">
+      <ul >
+          {props.children}
+      </ul>
+    </div>
   );
 }
 

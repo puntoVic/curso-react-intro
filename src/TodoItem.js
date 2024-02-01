@@ -1,9 +1,13 @@
-function TodoItem(props){
+function TodoItem({ text, completed, onComplete }){
     return(
       <li>
-        <span>V</span>
-        <p>{props.text}</p>
-        <span>X</span>
+        
+        <button
+          onClick={onComplete}
+          className={`check ${completed && "check-active"}`}
+        />
+        <p>{text}</p>
+        <span className="close">x</span>
       </li>
     );
   }
