@@ -1,7 +1,6 @@
 import React from 'react';
-function TodoSearch() {
-  const [searchValue, setSearchValue] = React.useState('');
-  console.log('los usuarios buscan todos de ' + searchValue);
+function TodoSearch({searchValue, setSearchValue,}) {
+
   return (
     <div className="main__Div">
       <input 
