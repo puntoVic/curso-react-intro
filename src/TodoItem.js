@@ -1,4 +1,4 @@
-function TodoItem({ text, completed, onComplete }){
+function TodoItem({ text, completed, onComplete, onDelete }){
     return(
       <li>
         
@@ -7,7 +7,11 @@ function TodoItem({ text, completed, onComplete }){
           className={`check ${completed && "check-active"}`}
         />
         <p>{text}</p>
-        <span className="close">x</span>
+        <span 
+        className="close" 
+        onClick = {onDelete}>
+          x
+        </span>
       </li>
     );
   }
