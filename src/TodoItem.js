@@ -2,16 +2,15 @@ function TodoItem({ text, completed, onComplete, onDelete }){
     return(
       <li>
         
-        <button
+        <CompleteIcon
           onClick={onComplete}
           className={`check ${completed && "check-active"}`}
         />
         <p>{text}</p>
-        <span 
+        <DeleteIcon 
         className="close" 
-        onClick = {onDelete}>
-          x
-        </span>
+        onClick = {onDelete} />
+        
       </li>
     );
   }
