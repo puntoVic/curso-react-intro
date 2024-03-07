@@ -1,17 +1,13 @@
+
+import {CompleteIcon} from './CompleteIcon.js';
+import {DeleteIcon} from './DeleteIcon.js';
 function TodoItem({ text, completed, onComplete, onDelete }){
     return(
       <li>
         
-        <button
-          onClick={onComplete}
-          className={`check ${completed && "check-active"}`}
-        />
+        <CompleteIcon/>
         <p>{text}</p>
-        <span 
-        className="close" 
-        onClick = {onDelete}>
-          x
-        </span>
+        <DeleteIcon/>
       </li>
     );
   }
