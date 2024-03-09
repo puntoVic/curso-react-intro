@@ -1,7 +1,10 @@
-import React from 'react';
-
-function DeleteIcon(){
-    return 'X'
+import React from "react";
+import {TodoIcon} from './TodoIcon.js';
+function DeleteIcon({onDelete}){
+   return( <TodoIcon 
+    type="delete"
+    onClick = {onDelete}
+/>);
 }
 
-export{DeleteIcon};
+export {DeleteIcon};
