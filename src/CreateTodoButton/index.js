@@ -1,12 +1,12 @@
-function CreateTodoButton() {
+function CreateTodoButton({setOpenModal}) {
   return (
     <button
-          className={'plus'}
-          onClick={(event) => {
-            console.log('le diste click')
-            console.log(event.target)}
+          className={'CreateTodoButton'}
+          onClick={() => {
+            setOpenModal(state =>!state);  
+            }
           }
-        />
+        >+</button>
   )
 }
 
